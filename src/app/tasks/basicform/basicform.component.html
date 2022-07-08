@@ -1,0 +1,16 @@
+<div>
+    <form action="" #basicForm="ngForm" (ngSubmit)="getValue(basicForm.value)">
+    <label for="inputuser">UserName:</label>
+    <input type="text" name="username" id="inputuser" placeholder="enter your name: " ngModel><br><br>
+    <label for="inputemail">Email:</label>
+    <input type="email" name="email" id="inputemail" placeholder="enter your email:" ngModel><br><br>
+    <label for="inputpassword">Password:</label>
+    <input type="password" name="password" id="inputpassword" placeholder="enter password: " ngModel><br><br>
+    <label for="inputrpassword">renterPassword:</label>
+    <input type="password" name="password" id="inputrpassword" placeholder=" re-enter password: " ngModel><br><br>
+    <button>submit</button>
+</form>
+<p>Username: {{displayVal.username}}</p>
+<p>Email id: {{displayVal.email}}</p>
+<p>password: {{displayVal.password}}</p>
+</div>

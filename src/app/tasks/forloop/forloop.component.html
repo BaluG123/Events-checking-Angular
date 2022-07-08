@@ -1,0 +1,12 @@
+<h2 style="color: #3b5998;"><i>for loop</i></h2>
+<div>
+    <ul *ngFor="let user of userDetails"> 
+        <li [style.color]="'white'" [style.background]="'black'">Name: {{user.name}} </li>
+        <li>Age: {{user.age}} </li>
+        <li>Gender: {{user.gender}}</li>
+        <li>Phonenumber: {{user.ph}}</li>
+        <ul *ngFor="let account of user.accounts">
+            <li>{{account}}</li>
+        </ul>
+    </ul>
+</div>

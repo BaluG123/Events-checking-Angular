@@ -1,0 +1,23 @@
+<h3 style="color:#3b5998;text-decoration: underline;"><i>If Else Checking</i></h3>
+<span *ngIf="show==='yes';then ifblock else elseblock"></span>
+<ng-template #ifblock>
+    <h5>If statement</h5>
+</ng-template>
+<ng-template #elseblock>
+    <h5>else statement</h5>
+</ng-template>
+
+<h3 style="text-decoration: underline;"><i>Multiple conditions</i></h3>
+<ng-template [ngIf]="color==='red'">
+   <h2 style="color:red;">red color</h2>
+</ng-template>
+<ng-template [ngIf]="color==='green'">
+    <h2 style="color:green;">green color</h2>
+</ng-template>
+
+<h3 style="text-decoration: underline;"><i>Switch case examples</i></h3>
+<div [ngSwitch]="balu">
+    <h2 *ngSwitchCase="'green'" style="color:green;">Green Color</h2>
+    <h2 *ngSwitchCase="'red'" style="color:red;">Red Color</h2>
+    <h2 *ngSwitchCase="'green'" style="color:blue;">Blue Color</h2>
+</div>

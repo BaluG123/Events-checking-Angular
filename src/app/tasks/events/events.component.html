@@ -1,0 +1,32 @@
+<div>
+    <h1 style="color:red;"><i>Checking function on button click </i></h1>
+    <button (click)="getName('balu')"> click me </button>
+    </div><hr>
+<div>
+    <h2 style="color: blue;">events checking with console</h2>
+    <input type="text" name="username" id="" #box (keyup)="getVal(box.value)" placeholder="key up example"><br><br>
+    <input type="text" name="something" id="" #box1 (keydown)="getVal(box1.value)" placeholder="keydown example"><br><br>
+    <input type="text" name="something" id="" #box2 (blur)="getVal(box2.value)" placeholder="blur example"><br><br>
+    <input type="text" name="something" #box3 (input)="getVal(box3.value)" placeholder="input example"><br><br>
+  </div><hr>
+  
+  <div>
+    <h3 style="color:green">Getting values after filling input using button</h3>
+    <input type="text" name="username" #box4 placeholder="enter your username ">
+    <button (click)="getVal(box4.value)">click</button>
+    <p>your name : {{displayVal}}</p>
+  </div><hr>
+  
+  <div>
+    <h3 style="color: #3b5998;">getting values while typing (events) </h3>
+    <p style="text-decoration: underline;color:#3b5998">keyUp </p>
+    <input type="text" name="username" placeholder="enter your name" #box6 (keyup)="getUp(box6.value)">
+    <p>username : {{displayUp}}</p>
+    <p style="text-decoration: underline;color:red">KeyDown</p>
+    <input type="email" name="email" id="email" placeholder="enter your email id" (keydown)="getDown(box7.value)" #box7>
+    <p>Email id : {{displayDown}}</p>
+    <p style="text-decoration: underline;color:green">Blur</p>
+    <input type="text" name="email" id="num" placeholder="enter your email id" (blur)="getBlur(box8.value)" #box8>
+    <p>Phone number : {{displayBlur}}</p>
+  </div><hr>
+  
